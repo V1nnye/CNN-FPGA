@@ -1,0 +1,222 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
+| Date         : Mon Aug 21 14:45:34 2023
+| Host         : gaphs24.portoalegre.pucrsnet.br running 64-bit Rocky Linux release 8.8 (Green Obsidian)
+| Command      : report_control_sets -verbose -file accelerator_control_sets_placed.rpt
+| Design       : accelerator
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   144 |
+|    Minimum number of control sets                        |   144 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   135 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   144 |
+| >= 0 to < 4        |     5 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |   129 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               1 |            1 |
+| No           | No                    | Yes                    |             114 |           79 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              32 |           11 |
+| Yes          | No                    | Yes                    |            4246 |         1317 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+-------------------------------------------------------------------------------------------------+-----------------------------------------------+------------------+----------------+--------------+
+|    Clock Signal    |                                          Enable Signal                                          |                Set/Reset Signal               | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------+-------------------------------------------------------------------------------------------------+-----------------------------------------------+------------------+----------------+--------------+
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/cols12[2].rows[0].mac12/en_reg                               | CNN/gen_core[3].core/GEN_CONV.CONV/pipe_reset |                1 |              1 |         1.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/cols12[2].rows[0].mac12/en_reg                               | CNN/gen_core[1].core/GEN_CONV.CONV/pipe_reset |                1 |              1 |         1.00 |
+|  p_clock_IBUF_BUFG |                                                                                                 |                                               |                1 |              1 |         1.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/cols12[2].rows[0].mac12/en_reg                               | CNN/gen_core[2].core/GEN_CONV.CONV/pipe_reset |                1 |              1 |         1.00 |
+|  p_clock_IBUF_BUFG | stop_i_1_n_0                                                                                    | p_reset_IBUF                                  |                1 |              1 |         1.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/FSM_onehot_EA_read[4]_i_1_n_0                                | p_reset_IBUF                                  |                2 |              5 |         2.50 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/FSM_onehot_EA_read[4]_i_1_n_0                                | p_reset_IBUF                                  |                1 |              5 |         5.00 |
+|  p_clock_IBUF_BUFG | FSM_onehot_EA_read[4]_i_1_n_0                                                                   | p_reset_IBUF                                  |                2 |              5 |         2.50 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/FSM_onehot_EA_read[4]_i_1_n_0                                | p_reset_IBUF                                  |                1 |              5 |         5.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/channel_control                                              | p_reset_IBUF                                  |                2 |              7 |         3.50 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/channel_control                                              | p_reset_IBUF                                  |                3 |              7 |         2.33 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/channel_control                                              | p_reset_IBUF                                  |                2 |              7 |         3.50 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/conv_length[7]_i_1_n_0                                       | p_reset_IBUF                                  |                2 |              8 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/conv_length[7]_i_1_n_0                                       | p_reset_IBUF                                  |                4 |              8 |         2.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/conv_length[7]_i_1_n_0                                       | p_reset_IBUF                                  |                3 |              8 |         2.67 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/weight[2,1]                                                  | p_reset_IBUF                                  |                6 |             16 |         2.67 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/weight_control[0]_i_1_n_0                                    | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/weight[2,0]                                                  | p_reset_IBUF                                  |                8 |             16 |         2.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/weight[1,2]                                                  | p_reset_IBUF                                  |                7 |             16 |         2.29 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/weight[2,2]                                                  | p_reset_IBUF                                  |                7 |             16 |         2.29 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/weight[0,2]                                                  | p_reset_IBUF                                  |                7 |             16 |         2.29 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/weight[1,1]                                                  | p_reset_IBUF                                  |                6 |             16 |         2.67 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/weight[1,0]                                                  | p_reset_IBUF                                  |                8 |             16 |         2.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/weight_control[0]_i_1_n_0                                    | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/weight[0,1]                                                  | p_reset_IBUF                                  |                6 |             16 |         2.67 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/weight[0,0]                                                  | p_reset_IBUF                                  |                6 |             16 |         2.67 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/partial_add[0]_i_1_n_0                                       | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/conv_length19_in                                             | p_reset_IBUF                                  |                5 |             16 |         3.20 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/cont_steps[15]_i_1_n_0                                       | p_reset_IBUF                                  |                5 |             16 |         3.20 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/buffer_features[2,1][15]_i_1_n_0                             | p_reset_IBUF                                  |                9 |             16 |         1.78 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/buffer_features[2,0][15]_i_1_n_0                             | p_reset_IBUF                                  |                9 |             16 |         1.78 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/cont_iterations[15]_i_1_n_0                                  | p_reset_IBUF                                  |                5 |             16 |         3.20 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/weight[1,0]                                                  | p_reset_IBUF                                  |                9 |             16 |         1.78 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/weight[0,2]                                                  | p_reset_IBUF                                  |                6 |             16 |         2.67 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/weight[0,1]                                                  | p_reset_IBUF                                  |                7 |             16 |         2.29 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/weight[0,0]                                                  | p_reset_IBUF                                  |                7 |             16 |         2.29 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/weight[1,1]                                                  | p_reset_IBUF                                  |                6 |             16 |         2.67 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/weight[1,2]                                                  | p_reset_IBUF                                  |               10 |             16 |         1.60 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/weight[2,0]                                                  | p_reset_IBUF                                  |                6 |             16 |         2.67 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/partial_add[0]_i_1_n_0                                       | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/weight[2,1]                                                  | p_reset_IBUF                                  |                6 |             16 |         2.67 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/conv_length19_in                                             | p_reset_IBUF                                  |                5 |             16 |         3.20 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/cont_steps[15]_i_1_n_0                                       | p_reset_IBUF                                  |                5 |             16 |         3.20 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/weight_x0                                                    | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/weight[2,2]                                                  | p_reset_IBUF                                  |                7 |             16 |         2.29 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/buffer_features[2,1][15]_i_1_n_0                             | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/buffer_features[2,0][15]_i_1_n_0                             | p_reset_IBUF                                  |                6 |             16 |         2.67 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/buffer_features[1,1][15]_i_1_n_0                             | p_reset_IBUF                                  |                5 |             16 |         3.20 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/buffer_features[1,0][15]_i_1_n_0                             | p_reset_IBUF                                  |                3 |             16 |         5.33 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/buffer_features[0,1][15]_i_1_n_0                             | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/buffer_features[0,0][15]_i_1_n_0                             | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/address_base[0]_i_1_n_0                                      | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/V[15]_i_1_n_0                                                | p_reset_IBUF                                  |                6 |             16 |         2.67 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/cont_iterations[15]_i_1_n_0                                  | p_reset_IBUF                                  |                6 |             16 |         2.67 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/weight_x0                                                    | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/buffer_features[2,1][15]_i_1_n_0                             | p_reset_IBUF                                  |                7 |             16 |         2.29 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/address_base[0]_i_1_n_0                                      | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/weight_x0                                                    | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | address_mem0                                                                                    |                                               |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | address0                                                                                        |                                               |                7 |             16 |         2.29 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/weight[1,0]                                                  | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/cont_iterations[15]_i_1_n_0                                  | p_reset_IBUF                                  |                5 |             16 |         3.20 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/V[15]_i_1_n_0                                                | p_reset_IBUF                                  |                6 |             16 |         2.67 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/cont_steps[15]_i_1_n_0                                       | p_reset_IBUF                                  |                2 |             16 |         8.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/weight[2,2]                                                  | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/buffer_features[2,0][15]_i_1_n_0                             | p_reset_IBUF                                  |                9 |             16 |         1.78 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/buffer_features[1,1][15]_i_1_n_0                             | p_reset_IBUF                                  |                6 |             16 |         2.67 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/buffer_features[1,0][15]_i_1_n_0                             | p_reset_IBUF                                  |               10 |             16 |         1.60 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/buffer_features[0,1][15]_i_1_n_0                             | p_reset_IBUF                                  |                9 |             16 |         1.78 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/buffer_features[0,0][15]_i_1_n_0                             | p_reset_IBUF                                  |                8 |             16 |         2.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/partial_add[0]_i_1_n_0                                       | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/conv_length19_in                                             | p_reset_IBUF                                  |                5 |             16 |         3.20 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/weight_control[0]_i_1_n_0                                    | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/weight[2,1]                                                  | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/weight[1,1]                                                  | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/weight[1,2]                                                  | p_reset_IBUF                                  |                3 |             16 |         5.33 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/weight[2,0]                                                  | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/V[15]_i_1_n_0                                                | p_reset_IBUF                                  |                7 |             16 |         2.29 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/weight[0,1]                                                  | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/weight[0,0]                                                  | p_reset_IBUF                                  |                5 |             16 |         3.20 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/address_base[0]_i_1_n_0                                      | p_reset_IBUF                                  |                4 |             16 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/weight[0,2]                                                  | p_reset_IBUF                                  |                5 |             16 |         3.20 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/buffer_features[1,1][15]_i_1_n_0                             | p_reset_IBUF                                  |               10 |             16 |         1.60 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/buffer_features[0,0][15]_i_1_n_0                             | p_reset_IBUF                                  |               10 |             16 |         1.60 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/buffer_features[0,1][15]_i_1_n_0                             | p_reset_IBUF                                  |               10 |             16 |         1.60 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/buffer_features[1,0][15]_i_1_n_0                             | p_reset_IBUF                                  |                9 |             16 |         1.78 |
+|  p_clock_IBUF_BUFG | index[16]_i_1_n_0                                                                               | p_reset_IBUF                                  |                3 |             17 |         5.67 |
+| ~p_clock_IBUF_BUFG |                                                                                                 | p_reset_IBUF                                  |               16 |             30 |         1.88 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_IWGHT.IWGHT/cont_write                                                 | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/IFMAP/sel                                                                  | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/IFMAP/cont_write[31]_i_1_n_0                                               | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/cont_debug[0]_i_1_n_0                                        | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/reg_bias_value0                                              | p_reset_IBUF                                  |               17 |             32 |         1.88 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/reg_bias_value0                                              | p_reset_IBUF                                  |               14 |             32 |         2.29 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/cont_total_valid[0]_i_1_n_0                                  | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/cont_weight_cycles[31]_i_1_n_0                               | p_reset_IBUF                                  |               10 |             32 |         3.20 |
+|  p_clock_IBUF_BUFG | CNN/OFMAP/cont_write[31]_i_1_n_0                                                                | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/IFMAP/cont_write[31]_i_1_n_0                                               | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/cont_weight_cycles[31]_i_1_n_0                               | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/cont_total_valid[0]_i_1_n_0                                  | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/OFMAP/sel                                                                                   | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/IFMAP/cont_write[31]_i_1_n_0                                               | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/cont_debug[0]_i_1_n_0                                        | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/IFMAP/sel                                                                  | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | IFMAP/sel                                                                                       | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_IWGHT.IWGHT/cont_read                                                  | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/cont_weight_cycles[31]_i_1_n_0                               | p_reset_IBUF                                  |               10 |             32 |         3.20 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_IWGHT.IWGHT/cont_write                                                 | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_IWGHT.IWGHT/sel                                                        | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_IWGHT.IWGHT/cont_read                                                  | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/cont_debug[0]_i_1_n_0                                        | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_IWGHT.IWGHT/cont_write[31]_i_1_n_0                                     | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/reg_bias_value0                                              | p_reset_IBUF                                  |               12 |             32 |         2.67 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/IFMAP/sel                                                                  | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | IFMAP/cont_write[31]_i_1_n_0                                                                    | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/cont_total_valid[0]_i_1_n_0                                  | p_reset_IBUF                                  |                8 |             32 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/partial2                                                     | p_reset_IBUF                                  |                6 |             36 |         6.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/partial1[35]_i_1_n_0                                         | p_reset_IBUF                                  |               22 |             36 |         1.64 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/partial1[35]_i_1_n_0                                         | p_reset_IBUF                                  |               19 |             36 |         1.89 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/partial2                                                     | p_reset_IBUF                                  |                9 |             36 |         4.00 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/partial2                                                     | p_reset_IBUF                                  |                7 |             36 |         5.14 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/partial1[35]_i_1_n_0                                         | p_reset_IBUF                                  |               20 |             36 |         1.80 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/read_bias_flag_reg_n_0                                       | p_reset_IBUF                                  |               15 |             48 |         3.20 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/read_bias_flag_reg_n_0                                       | p_reset_IBUF                                  |               20 |             48 |         2.40 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/read_bias_flag_reg_n_0                                       | p_reset_IBUF                                  |               21 |             48 |         2.29 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/partial_wr1                                                  | p_reset_IBUF                                  |               32 |             52 |         1.62 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/partial_wr1                                                  | p_reset_IBUF                                  |               28 |             52 |         1.86 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/partial_wr1                                                  | p_reset_IBUF                                  |               25 |             52 |         2.08 |
+|  p_clock_IBUF_BUFG |                                                                                                 | p_reset_IBUF                                  |               63 |             84 |         1.33 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/cont_conv[31]_i_1_n_0                                        | p_reset_IBUF                                  |               20 |             96 |         4.80 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/cont_conv[31]_i_1_n_0                                        | p_reset_IBUF                                  |               22 |             96 |         4.36 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/cont_conv[31]_i_1_n_0                                        | p_reset_IBUF                                  |               22 |             96 |         4.36 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/reg_config[convs_per_line_convs_per_line_n_channel_n_filter] | p_reset_IBUF                                  |               21 |             99 |         4.71 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/reg_config[convs_per_line_convs_per_line_n_channel_n_filter] | p_reset_IBUF                                  |               23 |             99 |         4.30 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/reg_config[convs_per_line_convs_per_line_n_channel_n_filter] | p_reset_IBUF                                  |               23 |             99 |         4.30 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/H                                                            | p_reset_IBUF                                  |               38 |            101 |         2.66 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/H                                                            | p_reset_IBUF                                  |               36 |            101 |         2.81 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/H                                                            | p_reset_IBUF                                  |               37 |            101 |         2.73 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/cols12[2].rows[0].mac12/en_reg                               | p_reset_IBUF                                  |               25 |            108 |         4.32 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/cols12[2].rows[0].mac12/en_reg                               | p_reset_IBUF                                  |               29 |            108 |         3.72 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/cols12[2].rows[0].mac12/en_reg                               | p_reset_IBUF                                  |               24 |            108 |         4.50 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[2].core/GEN_CONV.CONV/features[2,0][15]_i_1_n_0                                    | p_reset_IBUF                                  |               41 |            144 |         3.51 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[1].core/GEN_CONV.CONV/features[2,0][15]_i_1_n_0                                    | p_reset_IBUF                                  |               26 |            144 |         5.54 |
+|  p_clock_IBUF_BUFG | CNN/gen_core[3].core/GEN_CONV.CONV/features[2,0][15]_i_1_n_0                                    | p_reset_IBUF                                  |               26 |            144 |         5.54 |
++--------------------+-------------------------------------------------------------------------------------------------+-----------------------------------------------+------------------+----------------+--------------+
+
+

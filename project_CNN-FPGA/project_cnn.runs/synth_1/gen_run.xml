@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1692639695">
+  <File Type="VDS-TIMING-PB" Name="accelerator_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="accelerator_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="accelerator.dcp"/>
+  <File Type="PA-TCL" Name="accelerator.tcl"/>
+  <File Type="REPORTS-TCL" Name="accelerator_reports.tcl"/>
+  <File Type="RDS-RDS" Name="accelerator.vds"/>
+  <File Type="RDS-PROPCONSTRS" Name="accelerator_drc_synth.rpt"/>
+  <File Type="RDS-UTIL" Name="accelerator_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="accelerator_utilization_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/acc_dse_env-main/apps/rtl_output/default/default/bram/bram_36Kb.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../acc_dse_env-main/apps/rtl_output/default/default/bram/bram_36Kb.vhd"/>
+        <Attr Name="ImportTime" Val="1690152160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/acc_dse_env-main/apps/rtl_output/default/default/core/config_pkg.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../acc_dse_env-main/apps/rtl_output/default/default/core/config_pkg.vhd"/>
+        <Attr Name="ImportTime" Val="1690152160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/acc_dse_env-main/apps/rtl_output/default/default/bram/config_const_pkg.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../acc_dse_env-main/apps/rtl_output/default/default/bram/config_const_pkg.vhd"/>
+        <Attr Name="ImportTime" Val="1690152160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/acc_dse_env-main/rtl/core/util_pkg.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../acc_dse_env-main/rtl/core/util_pkg.vhd"/>
+        <Attr Name="ImportTime" Val="1690152160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/acc_dse_env-main/rtl/components/mem_bram.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../acc_dse_env-main/rtl/components/mem_bram.vhd"/>
+        <Attr Name="ImportTime" Val="1690152160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/acc_dse_env-main/rtl/components/mac.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../acc_dse_env-main/rtl/components/mac.vhd"/>
+        <Attr Name="ImportTime" Val="1690152160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/acc_dse_env-main/rtl/components/reg.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../acc_dse_env-main/rtl/components/reg.vhd"/>
+        <Attr Name="ImportTime" Val="1690152160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/acc_dse_env-main/rtl/convolution/syst2d_ws_split_multi.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../acc_dse_env-main/rtl/convolution/syst2d_ws_split_multi.vhd"/>
+        <Attr Name="ImportTime" Val="1690152160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/acc_dse_env-main/rtl/pool/maxpool2d.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../acc_dse_env-main/rtl/pool/maxpool2d.vhd"/>
+        <Attr Name="ImportTime" Val="1690152160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/acc_dse_env-main/rtl/fully_connected/simple.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../acc_dse_env-main/rtl/fully_connected/simple.vhd"/>
+        <Attr Name="ImportTime" Val="1690152160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/acc_dse_env-main/rtl/core/core_serial.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../acc_dse_env-main/rtl/core/core_serial.vhd"/>
+        <Attr Name="ImportTime" Val="1690152160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/acc_dse_env-main/rtl/cnn/simple.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../acc_dse_env-main/rtl/cnn/simple.vhd"/>
+        <Attr Name="ImportTime" Val="1690152160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/acc_dse_env-main/rtl/accelerator/simple.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../acc_dse_env-main/rtl/accelerator/simple.vhd"/>
+        <Attr Name="ImportTime" Val="1690152160"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="accelerator"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/acc_dse_env-main/Nexys-A7-100T-b.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../VivadoTests/CNN/project_CNN-FPGA/project_CNN-FPGA.srcs/constrs_1/imports/acc_dse_env-main/Nexys-A7-100T-b.xdc"/>
+        <Attr Name="ImportTime" Val="1684267364"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

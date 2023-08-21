@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Aug 21 14:41:40 2023
+# Process ID: 1010881
+# Current directory: /home/vinicius.souza/Desktop/project_CNN-FPGA/project_cnn.runs/synth_1
+# Command line: vivado -log accelerator.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source accelerator.tcl
+# Log file: /home/vinicius.souza/Desktop/project_CNN-FPGA/project_cnn.runs/synth_1/accelerator.vds
+# Journal file: /home/vinicius.souza/Desktop/project_CNN-FPGA/project_cnn.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source accelerator.tcl -notrace
